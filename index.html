@@ -47,6 +47,7 @@
     <div class="container">
         <div id="app">
             <h1 class="text-center">Registro de Alumnos</h1>
+
             <form @submit.prevent="submitForm">
                 <div class="form-group">
                     <label for="nombre">Nombre:</label>
@@ -81,7 +82,9 @@
                     </select>
                 </div>
                 <button type="submit" class="btn btn-custom btn-block">Registrar</button>
+             
             </form>
+
         </div>
     </div>
 
@@ -120,7 +123,7 @@
                 }
             },
             methods: {
-                guardarproducto() {
+                submitForm() {
                     // Obtener la información almacenada en localStorage
                     let alumnos = JSON.parse(localStorage.getItem('alumnos')) || [];
     
